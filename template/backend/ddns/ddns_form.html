@@ -1,7 +1,7 @@
 {{$config := $.Stored.config}}
 <div class="row no-margin">
 <div class="panel-body no-padding col-sm-12">
-    <div class="panel panel-default no-margin-bottom no-radius no-border-bottom">
+    <div class="panel panel-default no-margin-bottom no-radius">
         <div class="panel-heading">
             <h3 class="panel-title">{{`基础设置`|$.T}}</h3>
         </div><!-- /.panel-heading -->
@@ -34,7 +34,7 @@
     </div><!-- /.panel -->
   
   
-  <div class="panel panel-danger no-margin-bottom no-radius no-border-bottom">
+  <div class="panel panel-danger no-margin-bottom no-radius">
       <div class="panel-heading">
           <h3 class="panel-title">{{`IP查询`|$.T}}</h3>
       </div><!-- /.panel-heading -->
@@ -200,7 +200,7 @@
       </table>
   </div><!-- /.panel -->
 
-  <div class="panel panel-success no-margin-bottom no-radius no-border-bottom">
+  <div class="panel panel-success no-margin-bottom no-radius">
       <div class="panel-heading">
           <h3 class="panel-title">{{`DNS服务商`|$.T}}</h3>
       </div><!-- /.panel-heading -->
@@ -373,7 +373,7 @@
 
 {{- range $webhookK,$webhookV := $config.Webhooks -}}
 
-<div class="panel panel-default no-margin-bottom no-radius no-border-top ddns-webhook" id="ddns-webhook-{{$webhookK}}" data-index="{{$webhookK}}">
+<div class="panel panel-default no-margin-bottom no-radius ddns-webhook" id="ddns-webhook-{{$webhookK}}" data-index="{{$webhookK}}">
     <div class="panel-heading">
         <h3 class="panel-title">
             <span class="label label-danger clickable pull-right" title="{{`删除`|$.T}}" onclick="removeWebhook(this)">
